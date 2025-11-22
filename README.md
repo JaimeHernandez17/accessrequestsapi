@@ -21,6 +21,11 @@ Esto hará:
 - ✅ Ejecutar migraciones automáticamente
 - ✅ Levantar el servidor en `http://localhost:8000`
 
+**Acceder al proyecto:**
+- API: `http://localhost:8000/api/`
+- Admin: `http://localhost:8000/admin/`
+- Documentación: `http://localhost:8000/api/docs/`
+
 **Crear superusuario en Docker:**
 ```bash
 docker-compose -f docker-compose.local.yml exec django python manage.py createsuperuser

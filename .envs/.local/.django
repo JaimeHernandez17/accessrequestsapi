@@ -1,0 +1,12 @@
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+DJANGO_SETTINGS_MODULE=config.settings.local
+DJANGO_SECRET_KEY=tsbsUqbfIUuOJ9m3HOpqvFCDG6ZyjFgBadqgQtbe86r395uOq1UZqa4Gm7qSXWT0
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=localhost,0.0.0.0,127.0.0.1
+
+# Database
+# ------------------------------------------------------------------------------
+DATABASE_URL=postgres://DLikIdyRexQCHttoTCDCmplXzkyYlWkh:IyEd0MEcSIkSzcdxx87wQpYnAzV3jgrpzs3D4i4BYH9US6aDoNjwcVTgAxzYLjea@postgres:5432/accessrequestsapi

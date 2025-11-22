@@ -1,7 +1,7 @@
 volumes:
   accessrequestsapi_local_postgres_data: {}
   accessrequestsapi_local_postgres_data_backups: {}
-  
+
 
 services:
   django:
@@ -23,13 +23,10 @@ services:
     command: /start
 
   postgres:
-    build:
-      context: .
-      dockerfile: ./compose/production/postgres/Dockerfile
-    image: accessrequestsapi_production_postgres
+    image: postgres:16-alpine
     container_name: accessrequestsapi_local_postgres
     volumes:
-      - accessrequestsapi_local_postgres_data:/var/lib/postgresql/18/docker
+      - accessrequestsapi_local_postgres_data:/var/lib/postgresql/data
       - accessrequestsapi_local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres

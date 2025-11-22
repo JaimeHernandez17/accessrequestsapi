@@ -24,12 +24,9 @@ services:
     command: /start
 
   postgres:
-    build:
-      context: .
-      dockerfile: ./compose/production/postgres/Dockerfile
-    image: accessrequestsapi_production_postgres
+    image: postgres:16-alpine
     volumes:
-      - production_postgres_data:/var/lib/postgresql/18/docker
+      - production_postgres_data:/var/lib/postgresql/data
       - production_postgres_data_backups:/backups
     env_file:
       - ./.envs/.production/.postgres
@@ -48,7 +45,7 @@ services:
       - '0.0.0.0:443:443'
 
   redis:
-    image: docker.io/redis:7.2
+    image: redis:7-alpine
     
 
   nginx:
